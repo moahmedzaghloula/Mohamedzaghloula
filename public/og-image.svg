@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0v36" fill="none" stroke="#93A4B8" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#07111B"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M90 150h420" stroke="#FF4655" stroke-width="10"/>
+  <path d="M680 130c140 20 245 105 315 255" stroke="#3B82F6" stroke-width="12" fill="none"/>
+  <text x="90" y="265" fill="#F8FAFC" font-size="132" font-family="Arial Black, Impact, sans-serif">MOHAMED</text>
+  <text x="90" y="390" fill="#FF4655" font-size="132" font-family="Arial Black, Impact, sans-serif">ZAGHLOULA</text>
+  <rect x="92" y="420" width="420" height="62" rx="6" fill="#FACC15"/>
+  <text x="118" y="467" fill="#07111B" font-size="44" font-family="Arial Black, Impact, sans-serif">DEVOPS ENGINEER</text>
+  <text x="710" y="320" fill="#BFE0FF" font-size="42" font-family="Consolas, monospace">$ build --reliable</text>
+  <text x="710" y="374" fill="#22C55E" font-size="42" font-family="Consolas, monospace">&gt; cloud / k8s / sre</text>
+</svg>

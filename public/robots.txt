@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moahmedzaghloula.github.io/devops-portfolio/sitemap.xml
