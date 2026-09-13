@@ -18,11 +18,11 @@
 .portfolio-site main > section:not(.portfolio-hero) { padding-top: 76px; padding-bottom: 76px; background: transparent; border-bottom-color: #253743; }
 .portfolio-site main > section:not(.portfolio-hero) > div { max-width: 1280px; }
 
-.portfolio-nav { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 22px; }
+.portfolio-nav { display: grid; grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr); gap: 22px; }
+.portfolio-nav-center { display: flex; align-items: center; justify-content: center; gap: 42px; grid-column: 2; }
 .portfolio-nav-links { justify-content: center; }
-.portfolio-nav-end { display: flex; align-items: center; justify-content: flex-end; gap: 26px; justify-self: end; }
-.portfolio-nav-end .portfolio-nav-talk, .portfolio-nav-end .portfolio-availability { margin-left: 0; }
-.portfolio-nav-end .portfolio-availability { font-size: 11px; }
+.portfolio-nav-center .portfolio-nav-talk { margin-left: 0; }
+.portfolio-nav > .portfolio-availability { justify-self: end; margin-left: 0; font-size: 11px; }
 
 .section-heading { --section-accent: #ff2548; display: flex; align-items: baseline; gap: 17px; margin-bottom: 46px; }
 .section-heading[data-accent='blue'] { --section-accent: #1686ff; }
@@ -120,8 +120,8 @@
 @media (min-width: 900px) and (max-width: 1199px) {
   .portfolio-nav { gap: 12px; }
   .portfolio-nav-links { gap: 17px; }
-  .portfolio-nav-end { gap: 15px; }
-  .portfolio-nav-end .portfolio-availability { font-size: 9px; gap: 6px; }
+  .portfolio-nav-center { gap: 18px; }
+  .portfolio-nav > .portfolio-availability { font-size: 9px; gap: 6px; }
   .portfolio-nav-talk { padding-left: 10px; padding-right: 10px; font-size: 12px; }
 }
 @media (max-width: 1099px) {
@@ -132,8 +132,8 @@
 }
 @media (max-width: 899px) {
   .portfolio-nav { display: flex; gap: 20px; }
-  .portfolio-nav-end { margin-left: auto; }
-  .portfolio-nav-end .portfolio-availability { display: none; }
+  .portfolio-nav-center { margin-left: auto; }
+  .portfolio-nav-center .portfolio-nav-links, .portfolio-nav > .portfolio-availability { display: none; }
   .portfolio-site main > section:not(.portfolio-hero) { padding-top: 60px; padding-bottom: 60px; }
   .section-heading { gap: 13px; margin-bottom: 38px; }
   .section-heading-note { max-width: 165px; text-align: right; }

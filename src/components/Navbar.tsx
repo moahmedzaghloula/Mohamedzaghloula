@@ -47,15 +47,15 @@ export default function Navbar() {
     <header className="portfolio-header" ref={headerRef}>
       <nav className="portfolio-nav" aria-label="Primary navigation">
         <a href="#home" className="portfolio-logo" aria-label="Mohamed Zaghloula, home" onClick={() => setOpen(false)}><span>MZ</span><span>/&gt;</span></a>
-        <ul className="portfolio-nav-links">
-          {NAV_ITEMS.map(({ id, label }) => (
-            <li key={id}><a href={`#${id}`} aria-current={active === id ? 'location' : undefined}>{label}</a></li>
-          ))}
-        </ul>
-        <div className="portfolio-nav-end">
+        <div className="portfolio-nav-center">
+          <ul className="portfolio-nav-links">
+            {NAV_ITEMS.map(({ id, label }) => (
+              <li key={id}><a href={`#${id}`} aria-current={active === id ? 'location' : undefined}>{label}</a></li>
+            ))}
+          </ul>
           <a href={mailtoHref} className="portfolio-nav-talk">Let&apos;s Talk <ArrowUpRight size={16} aria-hidden="true" /></a>
-          <span className="portfolio-availability"><i aria-hidden="true" />AVAILABLE FOR OPPORTUNITIES</span>
         </div>
+        <span className="portfolio-availability"><i aria-hidden="true" />AVAILABLE FOR OPPORTUNITIES</span>
         <button ref={menuButton} className="portfolio-menu-button" type="button" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="portfolio-mobile-menu" onClick={() => setOpen(value => !value)}>
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>

@@ -1,13 +1,13 @@
 {
   "name": "Mohamed Zaghloula | DevOps Engineer",
   "short_name": "MZ DevOps",
-  "start_url": "/devops-portfolio/",
+  "start_url": "/Mohamedzaghloula/",
   "display": "standalone",
   "background_color": "#07111B",
   "theme_color": "#07111B",
   "icons": [
     {
-      "src": "/devops-portfolio/favicon.svg",
+      "src": "/Mohamedzaghloula/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
