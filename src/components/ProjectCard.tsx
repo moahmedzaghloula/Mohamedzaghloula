@@ -1,5 +1,14 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Boxes } from 'lucide-react'
+import { SiKubernetes, SiPrometheus, SiTerraform, SiGitlab, SiDocker, SiFastapi, SiFlask, SiAnsible, SiLaravel, SiGrafana, SiArgo, SiPostgresql } from 'react-icons/si'
+import type { IconType } from 'react-icons'
 import type { Project } from '../data/projects'
+
+const STACK_ICONS: Record<string, IconType> = {
+  Kubernetes: SiKubernetes, K3s: SiKubernetes, FastAPI: SiFastapi,
+  Prometheus: SiPrometheus, Grafana: SiGrafana, Terraform: SiTerraform,
+  'GitLab CI/CD': SiGitlab, 'Docker Compose': SiDocker, Flask: SiFlask,
+  Ansible: SiAnsible, Laravel: SiLaravel, 'Argo CD': SiArgo, PostgreSQL: SiPostgresql,
+}
 
 const accentClasses: Record<Project['accent'], { border: string; text: string; chip: string }> = {
   red: { border: 'hover:border-red', text: 'text-red', chip: 'border-red/30 text-red' },
@@ -13,14 +22,21 @@ export default function ProjectCard({ title, tagline, description, technologies,
 
   const cardInner = (
     <div
-      className={`group relative flex h-full flex-col border border-line bg-bg-1 p-6 transition-all duration-300 ${
+      data-accent={accent}
+      className={`project-card group relative flex h-full flex-col border border-line bg-bg-1 p-6 transition-all duration-300 ${
         hasRepo ? `cursor-pointer hover:-translate-y-1.5 hover:shadow-[0_20px_45px_-25px_rgba(0,0,0,0.8)] ${accentCls.border}` : 'opacity-80'
       }`}
     >
-      <div className="flex items-start justify-between gap-3">
+      <div className="project-stack" aria-hidden="true">
+        {technologies.slice(0, 3).map((technology, index) => {
+          const Icon = STACK_ICONS[technology] ?? Boxes
+          return <div key={technology} className="project-stack-item"><Icon size={27} /><span>{technology}</span>{index < 2 && <ArrowRight className="project-stack-arrow" size={16} />}</div>
+        })}
+      </div>
+      <div className="project-card-heading flex items-start justify-between gap-3">
         <div>
           <h3 className={`font-display text-2xl tracking-wide text-ink`}>{title}</h3>
-          <p className="font-mono text-[11px] text-muted mt-1">{tagline}</p>
+          <p className="project-tagline text-muted mt-1">{tagline}</p>
         </div>
         <ArrowUpRight
           size={20}
@@ -42,7 +58,7 @@ export default function ProjectCard({ title, tagline, description, technologies,
         </ul>
       )}
 
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="project-tags mt-5 flex flex-wrap gap-2">
         {technologies.map((t) => (
           <span key={t} className={`border px-2 py-0.5 text-[11px] font-mono ${accentCls.chip}`}>
             {t}

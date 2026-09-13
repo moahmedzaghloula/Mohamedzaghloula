@@ -33,8 +33,8 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading number="01" title="ABOUT ME" subtitle="/ more than code" accent="red" />
 
-        <div ref={ref} className="reveal grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
-          <p className="text-lg md:text-xl leading-relaxed text-muted max-w-xl">
+        <div ref={ref} className="about-layout reveal grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
+          <p className="about-story text-muted max-w-xl">
             I spend my time close to production &mdash; containerizing services, wiring up
             Kubernetes delivery, and writing the Terraform and Ansible that stands infrastructure
             up the same way every time. GitOps and CI/CD keep releases boring on purpose, and
@@ -43,9 +43,9 @@ export default function About() {
             application easier to reason about, not harder.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="about-traits grid grid-cols-1 sm:grid-cols-2 gap-4">
             {TRAITS.map(({ icon: Icon, title, body }) => (
-              <div key={title} className="border border-line bg-bg-1 p-5 hover:border-red/50 transition-colors">
+              <div key={title} className="about-trait p-5 transition-colors">
                 <Icon size={20} className="text-red mb-3" aria-hidden="true" />
                 <h3 className="font-display text-lg tracking-wide text-ink">{title}</h3>
                 <p className="mt-1.5 text-sm text-muted leading-relaxed">{body}</p>

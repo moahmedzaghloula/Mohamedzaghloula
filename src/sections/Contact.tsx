@@ -1,4 +1,4 @@
-import { Mail, MapPin, ArrowUpRight } from 'lucide-react'
+import { Mail, MapPin, ArrowUpRight, Download } from 'lucide-react'
 import { SiGithub } from 'react-icons/si'
 import SectionHeading from '../components/SectionHeading'
 import { LinkedInIcon } from '../components/icons'
@@ -17,9 +17,9 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading number="05" title="LET'S CONNECT" subtitle="/ open for opportunities" accent="blue" />
+        <SectionHeading number="06" title="LET'S CONNECT" subtitle="/ open for opportunities" accent="blue" />
 
-        <div ref={ref} className="reveal grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-14 items-center">
+        <div ref={ref} className="contact-layout reveal grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-14 items-center">
           <div>
             <ul className="space-y-4">
               {ITEMS.map(({ icon: Icon, label, href, external }) => (
@@ -28,7 +28,7 @@ export default function Contact() {
                     href={href}
                     target={external ? '_blank' : undefined}
                     rel={external ? 'noopener noreferrer' : undefined}
-                    className="group flex items-center gap-4 border-b border-line py-3 text-ink hover:text-red transition-colors"
+                    className="contact-link group flex items-center gap-4 border-b border-line py-3 text-ink hover:text-red transition-colors"
                   >
                     <Icon size={20} className="text-muted group-hover:text-red transition-colors" />
                     <span className="font-mono text-sm md:text-base">{label}</span>
@@ -41,25 +41,28 @@ export default function Contact() {
               </li>
             </ul>
 
+            <div className="contact-actions">
             <a
               href={mailtoHref}
-              className="mt-9 inline-flex items-center gap-2 bg-red px-7 py-3.5 font-mono text-sm text-bg-0 font-medium hover:bg-red/90 transition-colors"
+              className="hero-button hero-button-primary"
             >
               Let&apos;s Talk <ArrowUpRight size={16} />
             </a>
+            <a href={socials.cvPath} download className="hero-button hero-button-secondary">Download CV <Download size={16} aria-hidden="true" /></a>
+            </div>
           </div>
 
-          <div className="relative">
+          <div className="contact-note relative">
             <div className="absolute -top-8 -right-4 text-blue" aria-hidden="true">
               <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
                 <path d="M8 40 C 20 10, 45 5, 55 22" stroke="currentColor" strokeWidth="1.5" />
                 <path d="M48 18 L 56 23 L 50 30" stroke="currentColor" strokeWidth="1.5" fill="none" />
               </svg>
             </div>
-            <p className="font-hand text-3xl text-blue rotate-1 text-right">
+            <p className="font-hand">
               let&apos;s build something
               <br />
-              reliable together.
+              <span>reliable together.</span>
             </p>
           </div>
         </div>

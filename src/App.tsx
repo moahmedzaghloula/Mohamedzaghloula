@@ -7,10 +7,12 @@ import Toolbox from './sections/Toolbox'
 import Projects from './sections/Projects'
 import DeliveryLoop from './sections/DeliveryLoop'
 import Contact from './sections/Contact'
+import Certifications from './sections/Certifications'
+import './styles/portfolio.css'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-bg-0 text-ink">
+    <div className="portfolio-site noise min-h-screen text-ink">
       <Navbar />
       <main>
         <Hero />
@@ -18,6 +20,7 @@ export default function App() {
         <Experience />
         <Toolbox />
         <Projects />
+        <Certifications />
         <DeliveryLoop />
         <Contact />
       </main>

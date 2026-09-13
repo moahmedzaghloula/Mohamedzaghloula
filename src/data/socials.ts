@@ -8,7 +8,7 @@ export const socials = {
   linkedinDisplay: '/in/mohamed-zaghloula-ba5548235',
   github: 'https://github.com/moahmedzaghloula',
   githubDisplay: '/moahmedzaghloula',
-  cvPath: `${import.meta.env.BASE_URL}resume/Mohamed_Zaghloula_DevOps_Engineer_CV.pdf`,
+  cvPath: `${import.meta.env.BASE_URL}resume/Mohamed_Zaghloula_DevOps_.pdf`,
 }
 
 export const mailtoHref = `mailto:${socials.email}`

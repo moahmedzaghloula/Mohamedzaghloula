@@ -13,11 +13,11 @@ const accentText: Record<string, string> = {
 
 export default function SectionHeading({ number, title, subtitle, accent = 'red' }: Props) {
   return (
-    <div className="flex items-baseline gap-4 mb-10 md:mb-14">
-      <span className={`font-display text-3xl md:text-4xl ${accentText[accent]}`}>{number}.</span>
-      <h2 className="font-display text-3xl md:text-5xl tracking-wide text-ink">{title}</h2>
-      <span className="hidden sm:block flex-1 h-px bg-line" />
-      <span className="font-mono text-xs md:text-sm text-muted whitespace-nowrap">{subtitle}</span>
+    <div className="section-heading" data-accent={accent}>
+      <span className={`section-number ${accentText[accent]}`}>{number}.</span>
+      <h2>{title}</h2>
+      <span className="section-heading-rule" aria-hidden="true" />
+      <span className="section-heading-note">{subtitle}</span>
     </div>
   )
 }

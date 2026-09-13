@@ -1,0 +1,34 @@
+.certifications-heading { display: flex; align-items: baseline; gap: 16px; margin-bottom: 48px; }
+.certifications-heading-line { height: 1px; flex: 1; background: var(--color-line); }
+.certifications-caption { white-space: nowrap; }
+.certifications-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.certification { display: flex; align-items: center; gap: 24px; min-width: 0; padding: 28px; border: 1px solid #2a3944; border-radius: 6px; background: #0a141c; }
+.certification-aws { transition: border-color 180ms, background 180ms; }
+.certification-aws:hover { border-color: #e9b943; background: #101c24; }
+.certification-badge, .certification-emblem { flex-shrink: 0; width: 128px; height: 128px; object-fit: contain; }
+.certification-emblem { display: grid; place-items: center; color: #57a4ff; }
+.certification-copy { min-width: 0; }
+.certification-issuer { color: #f8cb53; font: 500 10px/1.5 var(--font-mono); margin-bottom: 10px; }
+.certification-route .certification-issuer { color: #6fb1ff; }
+.certification h3 { font-size: 21px; font-weight: 600; line-height: 1.3; letter-spacing: 0; }
+.certification-provider { color: #99a8b7; font-size: 12px; line-height: 1.6; margin-top: 10px; }
+.certification-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; color: #f5cd6a; font-size: 12px; }
+.certification-type { display: block; margin-top: 20px; color: #8ca5bf; font: 400 10px/1.5 var(--font-mono); }
+@media (max-width: 1099px) {
+  .certification { gap: 18px; padding: 22px; }
+  .certification-badge, .certification-emblem { width: 95px; height: 95px; }
+  .certification h3 { font-size: 18px; }
+}
+@media (max-width: 767px) {
+  .certifications-grid { grid-template-columns: 1fr; gap: 16px; }
+  .certifications-caption { display: none; }
+  .certifications-heading { gap: 12px; margin-bottom: 32px; }
+  .certification { gap: 20px; }
+  .certification h3 { font-size: 19px; }
+}
+@media (max-width: 389px) {
+  .certification { padding: 20px 16px; gap: 13px; }
+  .certification-badge, .certification-emblem { width: 76px; height: 76px; }
+  .certification h3 { font-size: 16px; }
+  .certification-issuer, .certification-type { font-size: 9px; }
+}
