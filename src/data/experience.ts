@@ -9,6 +9,17 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
+    company: 'Puracare Dental',
+    role: 'ERP DevOps Engineer',
+    period: 'September 2026 — Present',
+    accent: 'red',
+    bullets: [
+      'Engineer ERP integrations across internal platforms and third-party systems using APIs and automated jobs to keep business data synchronized and traceable.',
+      'Build and operate automated data pipelines for extracting, transforming, validating and delivering operational data across business workflows.',
+      'Automate deployments with CI/CD and strengthen reliability through logging, monitoring, alerting, retries and clear runbooks for rapid incident resolution.',
+    ],
+  },
+  {
     company: 'Firmus Financial',
     role: 'DevOps Engineer',
     period: 'May 2025 — July 2026',

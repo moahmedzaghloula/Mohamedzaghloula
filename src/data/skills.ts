@@ -6,6 +6,11 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
+    label: 'ERP & Data Integration',
+    command: '~/erp$',
+    items: ['ERP Workflows', 'REST APIs', 'Webhooks', 'ETL / ELT', 'Data Mapping', 'SQL', 'ODBC', 'Data Synchronization'],
+  },
+  {
     label: 'Cloud & IaC',
     command: '~/cloud$',
     items: ['AWS', 'Azure', 'Terraform', 'Ansible', 'LocalStack'],
