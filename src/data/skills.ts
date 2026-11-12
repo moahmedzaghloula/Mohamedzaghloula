@@ -6,9 +6,9 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    label: 'ERP & Data Integration',
-    command: '~/erp$',
-    items: ['ERP Workflows', 'REST APIs', 'Webhooks', 'ETL / ELT', 'Data Mapping', 'SQL', 'ODBC', 'Data Synchronization'],
+    label: 'Containers & Platform',
+    command: '~/platform$',
+    items: ['Docker', 'Kubernetes', 'Helm', 'Kustomize', 'K3s', 'Traefik', 'Nginx'],
   },
   {
     label: 'Cloud & IaC',
@@ -16,9 +16,9 @@ export const skillCategories: SkillCategory[] = [
     items: ['AWS', 'Azure', 'Terraform', 'Ansible', 'LocalStack'],
   },
   {
-    label: 'Containers & Platform',
-    command: '~/platform$',
-    items: ['Docker', 'Kubernetes', 'Helm', 'Kustomize', 'K3s', 'Traefik', 'Nginx'],
+    label: 'ERP & Data Integration',
+    command: '~/erp$',
+    items: ['ERP Workflows', 'REST APIs', 'Webhooks', 'ETL / ELT', 'Data Mapping', 'SQL', 'ODBC', 'Data Synchronization'],
   },
   {
     label: 'CI/CD & GitOps',
